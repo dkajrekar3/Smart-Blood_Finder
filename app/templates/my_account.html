@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>Username={{current_user.username}}<br>
+Email={{current_user.email}}<br>
+Contact={{current_user.contact}}<br>
+State={{current_user.state}}<br>
+City={{current_user.city}}<br>
+Pincode={{current_user.pincode}}<br>
+Bloodgroop={{current_user.bloodgroup}}<br>
+Age={{current_user.age}}<br>
+Weight={{current_user.weight}}<br>
+Gender={{current_user.gender}}<br>
+lastdonation={{current_user.lastdonation}}<br>
+
+<p><a href="/update">Update</a></p>
+
+{% endblock %}

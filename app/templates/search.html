@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+<div class="text-center">
+	<div class="text-center d-inline-flex">
+		<main class="form-signin">
+			<form action="" method="POST" novalidate>
+				{{form.hidden_tag()}}
+
+				<h1 class="h3 mb-3 fw-normal">Search For Blood</h1>
+
+				<div class="form-floating mb-3">
+					{{form.blood(class_="form-control")}}
+					<label for="floatingInput">Bloodgroup</label>
+				</div>
+				{% if form.blood.errors %}
+				{% for error in form.blood.errors %}
+				<span style="color: red"> {{error}} </span>
+				{% endfor %}
+				{% endif %}
+				<div class="form-floating mb-3">
+					{{form.city(size=32, class_="form-control")}}
+					<label for="floatingPassword">City</label>
+				</div>
+				{% if form.city.errors %}
+				{% for error in form.city.errors %}
+				<span style="color: red"> {{error}} </span>
+				{% endfor %}
+				{% endif %}
+				
+				{{form.submit(class_="w-100 btn btn-lg btn-primary")}}
+			
+			</form>
+		</main>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'base.html' %} {% block content %}
+<div class="text-center">
+	<div class="text-center d-inline-flex">
+		<form action="" method="POST">
+			{{form.hidden_tag()}}
+			<h1>Register</h1>
+			<div class="form-floating mb-3">
+				{{form.username(size=32,class_="form-control",id="username",placeholder="Enter username")}} {{form.username.label}}
+			</div>
+			{% for error in form.username.errors %}
+			<span style="color: red"> [{{error}}] </span>
+			{% endfor %}
+
+			<div class="form-floating mb-3">{{form.email(class_="form-control",id="email",placeholder="placeholder")}} {{form.email.label}}</div>
+			{% for error in form.email.errors %}
+			<span style="color: red"> [{{error}}] </span>
+			{% endfor %}
+
+			<div class="form-floating mb-3">
+				{{form.password(size=32,id="password",class_="form-control",placeholder="placeholder")}} {{form.password.label}}
+			</div>
+			{% for error in form.password.errors %}
+			<span style="color: red"> [{{error}}] </span>
+			{% endfor %}
+
+			<div class="form-floating mb-3">
+				{{form.confirm_password(size=32,id="confirm_password",class_="form-control",placeholder="placeholder")}} {{form.confirm_password.label}}
+			</div>
+			{% for error in form.confirm_password.errors %}
+			<span style="color: red"> [{{error}}] </span>
+			{% endfor %}
+
+			<div class="form-floating mb-3">
+				{{form.contact(size=32,id="contact",class_="form-control",placeholder="placeholder")}} {{form.contact.label}}
+			</div>
+			{% for error in form.contact.errors %}
+			<span style="color: red"> [{{error}}] </span>
+			{% endfor %}
+
+			<div class="form-floating mb-3">{{form.state(size=32,id="state",class_="form-control",placeholder="placeholder")}} {{form.state.label}}</div>
+			{% for error in form.state.errors %}
+			<span style="color: red"> [{{error}}] </span>
+			{% endfor %}
+
+			<div class="form-floating mb-3">{{form.city(size=32,id="city",class_="form-control",placeholder="placeholder")}} {{form.city.label}}</div>
+			{% for error in form.city.errors %}
+			<span style="color: red"> [{{error}}] </span>
+			{% endfor %}
+
+			<div class="form-floating mb-3">
+				{{form.pincode(size=32,id="pincode",class_="form-control",placeholder="placeholder")}} {{form.pincode.label}}
+			</div>
+			{% for error in form.pincode.errors %}
+			<span style="color: red"> [{{error}}] </span>
+			{% endfor %}
+
+			<div class="form-floating mb-3">
+				{{form.bloodgroup(size=32,id="bloodgroup",class_="form-select",placeholder="placeholder")}} {{form.bloodgroup.label}}
+			</div>
+			{% for error in form.bloodgroup.errors %}
+			<span style="color: red"> [{{error}}] </span>
+			{% endfor %}
+
+			<p>
+				{{form.age.label}}<br />
+				{{form.age(size=32)}}<br />
+				{% for error in form.age.errors %}
+				<span style="color: red"> [{{error}}] </span>
+				{% endfor %}
+			</p>
+			<p>
+				{{form.weight.label}}<br />
+				{{form.weight(size=32)}}<br />
+				{% for error in form.weight.errors %}
+				<span style="color: red"> [{{error}}] </span>
+				{% endfor %}
+			</p>
+			<p>
+				{{form.gender.label}}<br />
+				{{form.gender(size=32)}}<br />
+				{% for error in form.gender.errors %}
+				<span style="color: red"> [{{error}}] </span>
+				{% endfor %}
+			</p>
+			<p>
+				{{form.lastdonation.label}}<br />
+				{{form.lastdonation(size=32)}}<br />
+				{% for error in form.lastdonation.errors %}
+				<span style="color: red"> [{{error}}] </span>
+				{% endfor %}
+			</p>
+			<p>{{form.submit()}}</p>
+		</form>
+	</div>
+</div>
+
+<p>already have account? <a href="/login">Login</a></p>
+{% endblock %}

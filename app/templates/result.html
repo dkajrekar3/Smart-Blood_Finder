@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Available Donors</h1>
+{% for result in results %}
+    Name:
+    {{ result.username }}<br>
+    Contact No: 
+    {{ result.contact }}<hr>
+{% endfor %}
+<p><a class="btn btn-lg btn-outline-primary ms-3" href="/index">Back</a></p>
+{% endblock %}

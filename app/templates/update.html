@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Update</h1>
+<form action="" method='POST'>
+    {{form.hidden_tag()}}
+    <p>
+        {{form.username.label}}<br>
+        {{form.username(size=32)}}<br>
+        {% if form.username.errors %}
+        {% for error in form.username.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{form.email.label}}<br>
+        {{form.email(size=32)}}<br>
+        {% if form.email.errors %}
+        {% for error in form.email.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{form.contact.label}}<br>
+        {{form.contact(size=32)}}<br>
+        {% if form.contact.errors %}
+        {% for error in form.contact.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{form.state.label}}<br>
+        {{form.state(size=32)}}<br>
+        {% if form.state.errors %}
+        {% for error in form.state.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{form.city.label}}<br>
+        {{form.city(size=32)}}<br>
+        {% if form.city.errors %}
+        {% for error in form.city.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{form.pincode.label}}<br>
+        {{form.pincode(size=32)}}<br>
+        {% if form.pincode.errors %}
+        {% for error in form.pincode.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{form.bloodgroup.label}}<br>
+        {{form.bloodgroup}}<br>
+        {% if form.bloodgroup.errors %}
+        {% for error in form.bloodgroup.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{form.age.label}}<br>
+        {{form.age(size=32)}}<br>
+        {% if form.age.errors %}
+        {% for error in form.age.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{form.weight.label}}<br>
+        {{form.weight(size=32)}}<br>
+        {% if form.weight.errors %}
+        {% for error in form.weight.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{form.gender.label}}<br>
+        {{form.gender(size=32)}}<br>
+        {% if form.gender.errors %}
+        {% for error in form.gender.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{form.lastdonation.label}}<br>
+        {{form.lastdonation(size=32)}}<br>
+        {% if form.lastdonation.errors %}
+        {% for error in form.lastdonation.errors %}
+        <span style="color: red;"> [{{error}}] </span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p> {{form.submit()}}</p>
+    <p><a href="/cancel">Cancel</a></p>
+</form>
+{% endblock %}
