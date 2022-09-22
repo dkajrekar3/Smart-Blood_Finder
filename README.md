@@ -11,3 +11,6 @@ Refer to requirements.txt for python modules.
  `pip install -r requirements.txt`
  2. `flask run`
  That's it
+
+A user-friendly Flask web app for finding registered blood donors in your city.
+Stack: Python, SQLite, Flask, HTML, Bootstrap
